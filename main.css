@@ -33,7 +33,6 @@ body {
   background-image: url(images/bg-mobile.png);
   font-size: 14px;
   background-size: cover;
-  
   background-repeat: no-repeat;
   font-family: 'Raleway', sans-serif;
   
@@ -45,7 +44,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 0px 20px;
   gap: 1.25rem; 
 }
@@ -56,6 +55,7 @@ body {
  min-width: 20rem;
  padding: 2.5rem;
  border-radius: 0.625rem 6.25rem 0.625rem 0.625rem;
+ margin-top: 50px;
 
 }
 
@@ -88,6 +88,7 @@ body {
   border-radius: 0.625rem;
   
   position: relative;
+  margin-bottom: 100px;
 }
 
 .storage {
@@ -141,6 +142,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
   
   
   
@@ -232,9 +234,24 @@ p {
   
 }
 
+@media screen and (max-width: 320px){
+  .logocontainer {
+    background-color: var(--dark-blue);
+    height: 13rem;
+    min-width: 18rem;
+    padding: 2.5rem;
+    border-radius: 0.625rem 6.25rem 0.625rem 0.625rem;
+    margin-top: 50px;
+}
+.gigabyte {
+  min-width: 18rem;
 
+}
+.attribution {
+  padding: 20px;
+}
 
-
+}
 
 
 
