@@ -88,7 +88,7 @@ body {
   border-radius: 0.625rem;
   
   position: relative;
-  margin-bottom: 100px;
+  
 }
 
 .storage {
@@ -229,7 +229,7 @@ p {
 
   .gigabyte {
     width: 31.25rem;
-    margin-top: 1.875rem;
+    margin-top: 4.875rem;
   }
   
 }
