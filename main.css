@@ -1,283 +1,66 @@
-:root {  /*## Primary*/
-
---Gradient: hsl(6, 100%, 80%), hsl(335, 100%, 65%);
-
- /*### Neutral*/
-
---pale-blue: hsl(243, 100%, 93%);
---grayish-blue: hsl(229, 7%, 55%);
---dark-blue: hsl(228, 56%, 26%);
---very-dark-blue: hsl(229, 57%, 11%);
-
-/*font-weight */
-
- --font-medium: 400;
- --font-bold: 700;
-
-}
-
-
-*, *::after, *::before {
-  box-sizing: border-box;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-
-
-body {
-  background-image: url(images/bg-mobile.png);
-  font-size: 14px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: 'Raleway', sans-serif;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"> 
   
-  
-}
+  <title>Frontend Mentor | Fylo data storage component</title>
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 0px 20px;
-  gap: 1.25rem; 
-}
+</head>
+<body>
 
-.logocontainer {
- background-color: var(--dark-blue);
- height: 13rem;
- min-width: 20rem;
- padding: 2.5rem;
- border-radius: 0.625rem 6.25rem 0.625rem 0.625rem;
- margin-top: 50px;
+  <div class="container">
 
-}
-
-.icons {
-  display: flex;
-  align-items: center;
-  margin-top: 2rem;
-  
-} 
-
-.icons div {
-  height: 3.125rem;
-  width: 3.125rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--very-dark-blue);
-  margin-right: 0.9375rem;
-  border-radius: 10px;
-}
-
-.gigabyte {
-  min-width: 20rem;
-  height: 10rem;
-  background-color: var(--dark-blue);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.625rem;
-  
-  position: relative;
-  
-}
-
-.storage {
-  display: flex;
-  justify-content: space-between;
-  width: 16rem;
-  margin-top: 10px;
-}
-
-.progress-bar {
-  background: var(--very-dark-blue);
-  height: 1.25rem;
-  width: 16rem;
-  border: 3px solid var(--very-dark-blue);
-  border-radius: 10px;
-  margin-top: 15px;  
-}
-
-.percent {
-  background: linear-gradient(var(--Gradient));
-  width: 70%;
-  height: 15px;
-  position: relative;
-  border-radius: 20px;
-  
-  
-}
-
-.percent::after {
-  content: '';
-  position: absolute;
-  right: 0%;
-  top: 50%;
-  bottom: 50%;
-  transform: translate(-50%, -50%);
-  height: 10px;
-  width: 10px;
-  background-color: white;
-  border-radius: 50%;
-  
-  
-}
-
-.gbleft {
-  position: absolute;
-  background-color: whitesmoke;
-  height: 4rem;
-  width: 9.625rem;
-  top: 130px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  
-  
-  
-}
-
-.gbleft b{
-  font-size: 2.625rem;
-  margin-right: 0.625rem;
-  color: black;
-  
-}
-
-.gbleft p{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  color: var(--grayish-blue);
-  font-weight: var(--font-bold); 
-}
-
-p {
-  color: var(--pale-blue);
-}
-
-.storage {
-  font-weight: var(--font-bold);
-}
-
-/*desktop*/ 
-
-@media screen and (min-width: 900px){
-  body {
-  background-image: url(images/bg-desktop.png);
-  background-size: unset;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-color: var(--very-dark-blue);
-  }
+<div class="logocontainer">
+<div class="logo">
+  <img src="images/logo.svg" alt="">
+</div>
+<div class="icons">
+  <div>
+    <img src="images/icon-document.svg" alt="">
+  </div>
+  <div>
+    <img src="images/icon-folder.svg" alt="">
+  </div>
+  <div>
+    <img src="images/icon-upload.svg" alt="">
+  </div> 
+</div>
+</div>
 
 
-  .container {
-    flex-direction: row;
-  } 
+  <div class="gigabyte">
+    <div class="text">
+  <p>You’ve used <b>815 GB</b> of your storage</p>
+</div>
+<div class="gbleft">
+  <p><b>185</b> GB LEFT</p>
+</div>
+<div class="progress-bar">
+  <div class="percent"></div>
+</div>
 
-  .logocontainer {
-    margin-bottom: 20px ;
-  }
-  
-  .gbleft {
-    top: -40px;
-    right: 40px; 
-    
-  }
+<div class="storage">
+  <div>
+  <p>0 GB</p>
+</div>
+<div>
+  <p>1000 GB</p>
+</div>
+</div>
+</div>
 
-  .gbleft::after {
-    content: '';
-	position: absolute;
-	bottom: -30px;
-	right: 0;
-	width: 0;
-	height: 0;
-	border: 40px solid transparent;
-  border-top-color: whitesmoke;
-  border-right: 0;
-  border-bottom: 0;
-  }
-
-  
-  .text {
-    width: 26.875rem;
-    text-align: left;
-  }
-
-  .progress-bar {
-    width: 27rem;
-  }
-
-  .storage {
-    width: 27rem;
-    
-  }
-
-
-  .gigabyte {
-    width: 31.25rem;
-    margin-top: 4.875rem;
-  }
-  
-}
-
-@media screen and (max-width: 320px){
-  .logocontainer {
-    background-color: var(--dark-blue);
-    height: 13rem;
-    min-width: 18rem;
-    padding: 2.5rem;
-    border-radius: 0.625rem 6.25rem 0.625rem 0.625rem;
-    margin-top: 50px;
-}
-.gigabyte {
-  min-width: 18rem;
-
-}
-.attribution {
-  padding: 20px;
-}
-
-}
+</div>
 
 
 
-
-
-
-
-.attribution { font-size: 14px; 
-              text-align: center;
-              margin-top: auto;
-              color: white;
-              text-decoration:none;
-              width: 100%;
-              background: var(--very-dark-blue);
-              height: 1.25rem;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              
-            }
-
-            .attribution p {
-              color:var(--grayish-blue);
-            }
-
-    .attribution a { 
-      color:var(--pale-blue);
-      text-decoration:none;
-     }
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>. 
+    Coded by <a href="#">Makker47</p></a>.
+  </div>
+</body>
+</html>
