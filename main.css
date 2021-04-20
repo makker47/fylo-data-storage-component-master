@@ -77,6 +77,10 @@ body {
   border-radius: 10px;
 }
 
+.icons div:hover {
+  background-color: var(--button) ;
+}
+
 .gigabyte {
   min-width: 20rem;
   height: 10rem;
